@@ -11,7 +11,7 @@ import 'spectre.css'
 import 'spectre.css/dist/spectre-icons.css'
 import '@/assets/scss/custom.scss'
 
-//db
+// db
 import db from './datastore'
 
 Vue.prototype.$db = db
