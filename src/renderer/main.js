@@ -2,7 +2,17 @@ import Vue from 'vue'
 
 import App from './App'
 import router from './router'
-import store from './store'
+import VueClipboard from 'vue-clipboard2'
+import Notifications from 'vue-notification'
+import velocity from 'velocity-animate'
+
+// spectre.css
+import 'spectre.css'
+import 'spectre.css/dist/spectre-icons.css'
+import '@/assets/scss/custom.scss'
+
+Vue.use(VueClipboard)
+Vue.use(Notifications, { velocity })
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.config.productionTip = false
@@ -11,6 +21,5 @@ Vue.config.productionTip = false
 new Vue({
   components: { App },
   router,
-  store,
   template: '<App/>'
 }).$mount('#app')
