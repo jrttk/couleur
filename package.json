@@ -51,6 +51,7 @@
     }
   },
   "dependencies": {
+    "nedb": "^1.8.0",
     "spectre.css": "^0.5.8",
     "velocity-animate": "^1.5.2",
     "vue": "^2.5.16",

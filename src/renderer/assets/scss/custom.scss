@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+
 body {
   background: #f7f8f9;
 }
@@ -5,6 +7,13 @@ body {
 .container {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+#logo {
+  font-size: 35px;
+  color: #fff;
+  font-family: "Pacifico";
+  margin-bottom: 10px;
 }
 
 .color-palette-icon {
@@ -21,9 +30,17 @@ body {
   }
 }
 
-.toast {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  max-width: 400px;
+// .toast {
+//   position: fixed;
+//   bottom: 1rem;
+//   right: 1rem;
+//   max-width: 400px;
+// }
+
+.notifications {
+  right: 1rem !important;
+}
+
+.notification {
+  margin-bottom: 1rem;
 }

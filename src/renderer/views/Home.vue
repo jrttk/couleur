@@ -35,12 +35,8 @@
         </div>
       </div>
     </div>
-    <div class="columns">
-      <div
-        class="column col-4 col-md-6 col-sm-12 my-2"
-        v-for="(value, index) in colorData"
-        :key="index"
-      >
+    <div class="columns" v-if="colorData">
+      <div class="column col-4 col-md-6 col-sm-12 my-2" v-for="value in colorData" :key="value._id">
         <div class="card palette-card">
           <div class="card-body">
             <div class="columns">
@@ -48,7 +44,7 @@
                 <h5>{{ value.name }}</h5>
               </div>
               <div class="col-6">
-                <i class="icon icon-cross" @click="removePalette(index)"></i>
+                <i class="icon icon-cross" @click="removePalette(value._id)"></i>
               </div>
             </div>
             <div
@@ -79,6 +75,9 @@ export default {
       colorData: []
     };
   },
+  mounted() {
+    this.getData();
+  },
   methods: {
     addColor: function() {
       this.colors.push({
@@ -93,7 +92,11 @@ export default {
           colors
         };
         console.log(await data);
-        this.colorData.push(data);
+        // this.colorData.push(data);
+        this.$db.insert(data, function(err, newData) {
+          console.log(newData);
+        });
+        this.getData();
         this.paletteName = "";
         this.colors = [
           {
@@ -109,13 +112,28 @@ export default {
         console.log("there is something wrong");
       }
     },
-    removePalette: function(index) {
-      this.colorData.splice(index, 1);
+    removePalette: function(id) {
+      console.log(id);
+      this.$db.remove({ _id: id }, {}, (err, amount) => {
+        console.log(`removing ${id}`);
+        console.log(amount);
+        this.getData();
+      });
+    },
+    getData: function() {
+      this.$db.find({}, (err, colors) => {
+        console.log(colors);
+        this.colorData = colors.reverse();
+      });
     }
   }
 };
 </script>
 <style lang="scss" scoped>
+.container {
+  padding-top: 40px;
+}
+
 .card {
   .card-body {
     .form-group {
