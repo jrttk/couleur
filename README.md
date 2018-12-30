@@ -1,6 +1,6 @@
 # couleur
 
-> A color palette keeper based on Electron.js and Vue.js
+> A colour palette keeper app based on Electron.js + Vue.js
 
 #### Build Setup
 
@@ -14,9 +14,6 @@ npm run dev
 # build electron application for production
 npm run build
 
-
-# lint all JS/Vue component files in `src/`
-npm run lint
 
 ```
 

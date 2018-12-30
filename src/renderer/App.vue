@@ -9,3 +9,7 @@
     name: 'couleur'
   }
 </script>
+
+<style>
+  /* CSS */
+</style>
