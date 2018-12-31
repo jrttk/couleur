@@ -1,6 +1,6 @@
 <div align="center">
 <br>
-<img width="500" src="/docs/repo-logo.png" alt="Couleur">
+<img width="500" src="/docs/repo-logo.svg" alt="Couleur">
 <br>
 <br>
 </div>
