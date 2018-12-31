@@ -13,3 +13,8 @@ An app to help you remember palettes! Built with <a href="https://github.com/Sim
   
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com)
 </div>
+
+<div align="center">
+<br>
+<img width="500" src="/docs/screenshot.png" alt="Couleur">
+</div>
