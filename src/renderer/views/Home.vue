@@ -40,10 +40,10 @@
         <div class="card palette-card">
           <div class="card-body">
             <div class="columns">
-              <div class="col-6">
+              <div class="column col-9">
                 <h5>{{ value.name }}</h5>
               </div>
-              <div class="col-6">
+              <div class="column col-3">
                 <i class="icon icon-cross" @click="removePalette(value._id)"></i>
               </div>
             </div>
@@ -166,7 +166,11 @@ export default {
       margin-right: initial;
       margin-bottom: 15px;
 
-      .col-6:last-of-type {
+      .column{
+        padding: 0;
+      }
+
+      .column:last-of-type {
         text-align: right;
 
         i {
