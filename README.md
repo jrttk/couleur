@@ -16,5 +16,5 @@ An app to help you remember palettes! Built with <a href="https://github.com/Sim
 
 <div align="center">
 <br>
-<img width="500" src="/docs/screenshot.png" alt="Couleur">
+<img width="100%" src="/docs/screenshot.png" alt="Couleur">
 </div>
