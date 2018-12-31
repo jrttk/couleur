@@ -10,7 +10,7 @@
     />
     <!-- Main -->
     <div class="columns" id="add-palette-card">
-      <div class="col-6 col-mx-auto">
+      <div class="col-5 col-mx-auto">
         <div class="card">
           <div class="card-body">
             <div class="form-group" :class="error ? 'has-error' : ''">
@@ -86,16 +86,11 @@ export default {
     },
     addPalette: async function(paletteName, colors) {
       if (this.paletteName) {
-        console.log("palette added!");
         let data = await {
           name: paletteName,
           colors
         };
-        console.log(await data);
-        // this.colorData.push(data);
-        this.$db.insert(data, function(err, newData) {
-          console.log(newData);
-        });
+        this.$db.insert(data, function(err, newData) {});
         this.getData();
         this.paletteName = "";
         this.colors = [
@@ -109,20 +104,15 @@ export default {
         });
       } else {
         this.error = true;
-        console.log("there is something wrong");
       }
     },
     removePalette: function(id) {
-      console.log(id);
       this.$db.remove({ _id: id }, {}, (err, amount) => {
-        console.log(`removing ${id}`);
-        console.log(amount);
         this.getData();
       });
     },
     getData: function() {
       this.$db.find({}, (err, colors) => {
-        console.log(colors);
         this.colorData = colors.reverse();
       });
     }
@@ -131,7 +121,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container {
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
 .card {
@@ -146,7 +136,7 @@ export default {
     }
     .empty {
       margin-top: 10px;
-      padding: 15px;
+      padding: 10px;
 
       &:hover {
         cursor: pointer;
