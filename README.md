@@ -1,22 +1,20 @@
-# couleur
+<div align="center">
+<br>
+<img width="300" src="/docs/logo.png" alt="Couleur">
+<br>
+<br>
+</div>
 
-> A colour palette keeper app based on Electron.js + Vue.js
+<p align="center" color="#6a737d">
+An app to help you remember palettes! Built with <a href="https://github.com/SimulatedGREG/electron-vue">electron-vue</a> & <a href="https://picturepan2.github.io/spectre/">spectre.css</a>
+</p>
 
-#### Build Setup
+<div align="center">
+  
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com)
+</div>
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:9080
-npm run dev
-
-# build electron application for production
-npm run build
-
-
-```
-
----
-
-This project was generated with [electron-vue](https://github.com/SimulatedGREG/electron-vue) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
+<div align="center">
+<br>
+<img width="100%" src="/docs/screenshot.png" alt="Couleur">
+</div>
