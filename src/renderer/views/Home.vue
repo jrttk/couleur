@@ -90,7 +90,9 @@ export default {
           name: paletteName,
           colors
         };
-        this.$db.insert(data, function(err, newData) {});
+        this.$db.insert(data, function(err, newData) {
+          console.log(newData)
+        });
         this.getData();
         this.paletteName = "";
         this.colors = [
@@ -112,8 +114,8 @@ export default {
       });
     },
     getData: function() {
-      this.$db.find({}, (err, colors) => {
-        this.colorData = colors.reverse();
+      this.$db.find({}).sort({ createdAt: -1 }).exec((err, colors) => {
+        this.colorData = colors;
       });
     }
   }

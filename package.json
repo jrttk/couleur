@@ -1,6 +1,6 @@
 {
   "name": "couleur",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "wonderbright <jirattikarn00@tuta.io>",
   "description": "A colour palette keeper app based on Electron.js + Vue.js",
   "license": "MIT",
