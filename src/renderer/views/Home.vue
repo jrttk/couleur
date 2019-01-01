@@ -54,6 +54,7 @@
               class="color-palette-icon tooltip"
               :data-tooltip="'#' + color.hex"
               v-clipboard:copy="'#' + color.hex"
+              @click="clipboardNotify()"
             ></div>
           </div>
         </div>
@@ -100,10 +101,6 @@ export default {
             hex: ""
           }
         ];
-        this.$notify({
-          group: "clipboard",
-          text: "Hex code copied to clipboard!"
-        });
       } else {
         this.error = true;
       }
@@ -116,6 +113,12 @@ export default {
     getData: function() {
       this.$db.find({}).sort({ createdAt: -1 }).exec((err, colors) => {
         this.colorData = colors;
+      });
+    },
+    clipboardNotify: function () {
+      this.$notify({
+        group: "clipboard",
+        text: "Hex code copied to clipboard!"
       });
     }
   }
